@@ -47,6 +47,7 @@ ax.yaxis.tick_left()
 
 # Add colorbar
 cbar = fig.colorbar(cax)
+cbar.set_label('Accuracy (%)')
 
 # Add text annotations to the cells
 for i in range(len(class_names)):

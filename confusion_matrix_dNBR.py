@@ -47,6 +47,7 @@ ax.yaxis.tick_left()
 
 # Add colorbar
 cbar = fig.colorbar(cax)
+cbar.set_label('Accuracy (%)')
 
 # Add text annotations to the cells
 for i in range(len(class_names)):
@@ -64,3 +65,15 @@ ax.set_ylabel('Estimated (dNBR)')
 plt.savefig('confusion_matrix_dNBR.png', bbox_inches='tight', pad_inches=0.1)
 
 plt.show()
+
+
+
+# from mlxtend.plotting import plot_confusion_matrix
+
+# multiclass = np.array(confusion_matrix)
+
+# fig, ax = plot_confusion_matrix(conf_mat=multiclass,
+#                                 colorbar=True,
+#                                 show_absolute=False,
+#                                 show_normed=True)
+# plt.show()
